@@ -12,7 +12,6 @@ jobs:
   train-build-push:
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
-    container: python:3.12.7
 
     steps:
       - name: Checkout repository
@@ -63,7 +62,6 @@ jobs:
   build-pr:
     if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
-    container: python:3.12.7
 
     steps:
       - name: Checkout repository
